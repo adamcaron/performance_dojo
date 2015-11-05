@@ -21,4 +21,5 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'better_errors'
 end
