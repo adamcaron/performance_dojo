@@ -1,10 +1,13 @@
 <h1><%= @tag ? "Articles Tagged '#{@tag}'" : "All Articles" %></h1>
 
+<%= will_paginate @articles %>
+
 <%= link_to "New Article", new_article_path, :class => 'new_article' %>
 
 <div id="sidebar">
   Filter by Tag: <%= tag_links(Tag.all) %>
 </div>
+
 
 <ul id="articles">
   <% @articles.each do |article| %>

@@ -10,6 +10,7 @@ gem 'newrelic_rpm'
 gem 'dalli'
 gem "redis"
 gem 'redis-namespace'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'spring'

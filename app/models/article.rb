@@ -39,15 +39,6 @@ class Article < ActiveRecord::Base
     Article.select(:id).collect{|a| a.id}
   end
 
-  def self.search_by_tag_name(tag_name)
-    if tag_name.blank?
-      [Article.all, nil]
-    else
-      tag = Tag.find_by_name(tag_name)
-      tag ? [tag.articles, tag] : [[], nil]
-    end
-  end
-
   def self.for_dashboard
     order('created_at DESC').limit(5)
   end
